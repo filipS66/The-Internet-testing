@@ -1,5 +1,5 @@
 # the_internet_selenium_js
- The Internet heroku app test automation
- This repository contains the automated tests I have made for The Internet app .
-
- It's powered by Selenium, JavaScript, and Mocha.
+ The Internet heroku app is an example of application that captures prominent and ugly functionality found on the web. It's perfect for practicing test automation scripting.
+ This repository contains automated tests for The Internet app.(Selenium, Node.js, Mocha, Mochawesome)
+ 
+ "The Internet" is available at http://the-internet.herokuapp.com.
