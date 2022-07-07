@@ -1,0 +1,957 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 20,
+    "passes": 17,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-07-07T17:48:02.943Z",
+    "end": "2022-07-07T17:50:14.429Z",
+    "duration": 131486,
+    "testsRegistered": 20,
+    "passPercent": 85,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "47c9c1fa-051b-4fab-a2a9-73f3783a2bbf",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "83ef3265-4e21-4353-b630-24fbba953ff9",
+          "title": "REGR_A/B Testing",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_A/B Testing\"",
+              "fullTitle": "REGR_A/B Testing \"before all\" hook in \"REGR_A/B Testing\"",
+              "timedOut": false,
+              "duration": 9,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "d758b199-2152-4695-9273-4a590598aab5",
+              "parentUUID": "83ef3265-4e21-4353-b630-24fbba953ff9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_A/B Testing\"",
+              "fullTitle": "REGR_A/B Testing \"after all\" hook in \"REGR_A/B Testing\"",
+              "timedOut": false,
+              "duration": 902,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "b0cd70c1-3dbf-4d98-9f30-fb9af13b811c",
+              "parentUUID": "83ef3265-4e21-4353-b630-24fbba953ff9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-1, verif text in paragraph",
+              "fullTitle": "REGR_A/B Testing TC-1, verif text in paragraph",
+              "timedOut": false,
+              "duration": 5645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try{\n            await driver.get('http://the-internet.herokuapp.com/');\n        }catch(e){\n            await driver.quit();\n            driver = new webdriver.Builder()\n                .forBrowser('firefox')\n                .build();\n            await driver.get('http://the-internet.herokuapp.com/');\n        }\n        \n        await driver.findElement(By.css(\"a[href='/abtest']\")).click();\n    \n        var title_verifying = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/h3[1]\")).getText(); \n        \n        expect(title_verifying).to.be.oneOf([\"A/B Test Variation 1\", \"A/B Test Control\"]);\n        \n        var text_verifying = await driver.findElement(By.xpath('//*[@id=\"content\"]/div/p')).getText();\n        \n        await text_verifying.should.equal(\"Also known as split testing. This is a way in which businesses are able to simultaneously test and learn different versions of a page to see which text and/or functionality works best towards a desired outcome (e.g. a user action such as a click-through).\");",
+              "err": {},
+              "uuid": "d0b7f353-6137-4f0e-ad51-8b5d1ccc4fc6",
+              "parentUUID": "83ef3265-4e21-4353-b630-24fbba953ff9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d0b7f353-6137-4f0e-ad51-8b5d1ccc4fc6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5645,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "55982505-8025-4bdb-bad4-7d3485c44758",
+          "title": "REGR_Add/Remove Elements",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Add/Remove Elements\"",
+              "fullTitle": "REGR_Add/Remove Elements \"before all\" hook in \"REGR_Add/Remove Elements\"",
+              "timedOut": false,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "e7a4b904-7ec3-40da-8337-e45a8f3bd6f3",
+              "parentUUID": "55982505-8025-4bdb-bad4-7d3485c44758",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Add/Remove Elements\"",
+              "fullTitle": "REGR_Add/Remove Elements \"after all\" hook in \"REGR_Add/Remove Elements\"",
+              "timedOut": false,
+              "duration": 811,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "dbd54fcd-96fd-46e9-a833-fd3e61bb3063",
+              "parentUUID": "55982505-8025-4bdb-bad4-7d3485c44758",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-2, verif that one 'delete' button is added on 'Add Element' button click",
+              "fullTitle": "REGR_Add/Remove Elements TC-2, verif that one 'delete' button is added on 'Add Element' button click",
+              "timedOut": false,
+              "duration": 5010,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('http://the-internet.herokuapp.com/');\n   await driver.findElement(By.css(\"a[href='/add_remove_elements/']\")).click();\n \n   var title_verifying = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/h3[1]\")).getText(); \n   await title_verifying.should.equal(\"Add/Remove Elements\");\n   var verify_add_element_button = await driver.findElement(By.css(\"button[onclick='addElement()']\")).getText();\n   await verify_add_element_button.should.equal(\"Add Element\");\n   var add_element_button = await driver.findElement(By.css(\"button[onclick='addElement()']\"));\n   \n   var varify_only_one_button_exists = await driver.findElements(By.css(\"button\"));\n   await varify_only_one_button_exists.should.have.lengthOf(1);",
+              "err": {},
+              "uuid": "6d79e9d5-9d3b-43ec-94ee-cb759100a4c8",
+              "parentUUID": "55982505-8025-4bdb-bad4-7d3485c44758",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-3, verif that two 'delete' button's are added on two 'Add Element' button click's, and then verify button can be removed",
+              "fullTitle": "REGR_Add/Remove Elements TC-3, verif that two 'delete' button's are added on two 'Add Element' button click's, and then verify button can be removed",
+              "timedOut": false,
+              "duration": 1147,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('http://the-internet.herokuapp.com/');\n        await driver.findElement(By.css(\"a[href='/add_remove_elements/']\")).click();\n      \n        var title_verifying = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/h3[1]\")).getText(); \n        await title_verifying.should.equal(\"Add/Remove Elements\");\n        var verify_add_element_button = await driver.findElement(By.css(\"button[onclick='addElement()']\")).getText();\n        await verify_add_element_button.should.equal(\"Add Element\");\n        var add_element_button = await driver.findElement(By.css(\"button[onclick='addElement()']\"));\n        \n        var varify_only_one_button_exists = await driver.findElements(By.css(\"button\"));\n        await varify_only_one_button_exists.should.have.lengthOf(1);\n        \n        await add_element_button.click();\n        var varify_two_buttons_exists = await driver.findElements(By.css(\"button\"));\n        await varify_two_buttons_exists.should.have.lengthOf(2);\n        await varify_two_buttons_exists[1].click(); //click second ,delete , button\n        var varify_two_buttons_exists = await driver.findElements(By.css(\"button\"));\n        await varify_two_buttons_exists.should.have.lengthOf(1); //after one button is removed only one ,add, button remains",
+              "err": {},
+              "uuid": "c6d4daf3-1549-4a56-ac58-39d04bdcb9ba",
+              "parentUUID": "55982505-8025-4bdb-bad4-7d3485c44758",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-4, verif that multiple 'delete' button's are added on multiple 'Add Element' button click's, and then verify multiple button's can be removed",
+              "fullTitle": "REGR_Add/Remove Elements TC-4, verif that multiple 'delete' button's are added on multiple 'Add Element' button click's, and then verify multiple button's can be removed",
+              "timedOut": false,
+              "duration": 1931,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('http://the-internet.herokuapp.com/');\n        await driver.findElement(By.css(\"a[href='/add_remove_elements/']\")).click();\n        //click add button 3 times and verify mechanism\n        var add_element_button = await driver.findElement(By.css(\"button[onclick='addElement()']\"));\n        await add_element_button.click();\n        await add_element_button.click();\n        await add_element_button.click();\n        var varify_four_buttons_exists = await driver.findElements(By.css(\"button\"));\n        await varify_four_buttons_exists.should.have.lengthOf(4);\n        \n        //click add button 3 times and verify mechanism\n        await varify_four_buttons_exists[3].click(); //click fourth ,delete , button\n        await varify_four_buttons_exists[2].click(); //click third ,delete , button\n        var varify_two_buttons_exists = await driver.findElements(By.css(\"button\"));\n        await varify_two_buttons_exists.should.have.lengthOf(2);\n        \n        //after removing two delete buttons add one and verify number of buttons is correct\n        await add_element_button.click();\n        var varify_three_buttons_exists = await driver.findElements(By.css(\"button\"));\n        await varify_three_buttons_exists.should.have.lengthOf(3);",
+              "err": {},
+              "uuid": "0121fb26-89ca-4ba5-9336-98fab19b335b",
+              "parentUUID": "55982505-8025-4bdb-bad4-7d3485c44758",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d79e9d5-9d3b-43ec-94ee-cb759100a4c8",
+            "c6d4daf3-1549-4a56-ac58-39d04bdcb9ba",
+            "0121fb26-89ca-4ba5-9336-98fab19b335b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8088,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "35e661c5-5b88-4afe-9446-8cd27466f557",
+          "title": "REGR_Basic Auth",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-5, verify if a user will be able to login with a valid username and valid password.",
+              "fullTitle": "REGR_Basic Auth TC-5, verify if a user will be able to login with a valid username and valid password.",
+              "timedOut": false,
+              "duration": 7152,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n    \n        await driver.get('https://admin:admin@the-internet.herokuapp.com/basic_auth');\n        var title = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/h3[1]\")).getText(); \n        await title.should.equal(\"Basic Auth\");\n        var paragraph_congrats = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[1]\")).getText(); \n        await paragraph_congrats.should.equal(\"Congratulations! You must have the proper credentials.\");\n        var footer = await driver.findElement(By.css(\"div[style='text-align: center;']\")).getText(); \n        await footer.should.equal(\"Powered by Elemental Selenium\");\n        var link_elemental_selenium = await driver.findElement(By.css(\"a[href='http://elementalselenium.com/']\")).getText();  \n        await link_elemental_selenium.should.equal(\"Elemental Selenium\");\n        await driver.quit();",
+              "err": {},
+              "uuid": "704535be-8bfc-4398-b975-446576b82a74",
+              "parentUUID": "35e661c5-5b88-4afe-9446-8cd27466f557",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-6, verify if a user cannot login with a valid username and an invalid password.",
+              "fullTitle": "REGR_Basic Auth TC-6, verify if a user cannot login with a valid username and an invalid password.",
+              "timedOut": false,
+              "duration": 6348,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n \n        await driver.get('https://admi:admi@the-internet.herokuapp.com/basic_auth');\n        let alert = await driver.switchTo().alert();\n        \n        await alert.dismiss();//you are going to log in alert\n        await driver.sleep(2000);\n        var paragraph = await driver.findElement(By.xpath(\"/html[1]/body[1]\")).getText(); \n        await paragraph.should.equal(\"Not authorized\");\n        await driver.quit();\n        driver.sleep(2000);",
+              "err": {},
+              "uuid": "f2479e52-0b8f-4393-b663-5bf61e961d87",
+              "parentUUID": "35e661c5-5b88-4afe-9446-8cd27466f557",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-7, verify the login page for both, when the field is blank and Submit button is clicked.",
+              "fullTitle": "REGR_Basic Auth TC-7, verify the login page for both, when the field is blank and Submit button is clicked.",
+              "timedOut": false,
+              "duration": 7195,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n   \n        await driver.get('https://the-internet.herokuapp.com/basic_auth');\n        await driver.sleep(1000);\n        await driver.wait(until.alertIsPresent());\n        let alert_1 = await driver.switchTo().alert();\n        await alert_1.accept();\n        await driver.sleep(1000);\n        alert_2 = await driver.switchTo().alert();\n        await alert_2.accept();\n        await driver.sleep(1000);\n        var paragraph = await driver.findElement(By.xpath(\"/html[1]/body[1]\")).getText();\n        await paragraph.should.equal(\"Not authorized\");\n        await driver.quit();",
+              "err": {},
+              "uuid": "c35793a7-a4f2-47d0-87c3-a270ba958899",
+              "parentUUID": "35e661c5-5b88-4afe-9446-8cd27466f557",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "704535be-8bfc-4398-b975-446576b82a74",
+            "f2479e52-0b8f-4393-b663-5bf61e961d87",
+            "c35793a7-a4f2-47d0-87c3-a270ba958899"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20695,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "7e20b648-435b-459c-a704-d0a0057cd5f4",
+          "title": "REGR_Broken Image",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Broken Image\"",
+              "fullTitle": "REGR_Broken Image \"before all\" hook in \"REGR_Broken Image\"",
+              "timedOut": false,
+              "duration": 4,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "ea5e36ae-c4d0-403a-a95b-968cc392ae21",
+              "parentUUID": "7e20b648-435b-459c-a704-d0a0057cd5f4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Broken Image\"",
+              "fullTitle": "REGR_Broken Image \"after all\" hook in \"REGR_Broken Image\"",
+              "timedOut": false,
+              "duration": 866,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "544f0253-7951-4c60-b2a0-933f6e15fa95",
+              "parentUUID": "7e20b648-435b-459c-a704-d0a0057cd5f4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-8, verify all images on page are diplayed as expected.",
+              "fullTitle": "REGR_Broken Image TC-8, verify all images on page are diplayed as expected.",
+              "timedOut": false,
+              "duration": 6078,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/broken_images');\n       var all_imgs = await driver.findElements( By.css(\"img\") );\n       \n       var img_src = [];\n       for (var i = 0; i < all_imgs.length; i++){\n           await all_imgs[i].getAttribute(\"src\").then( img_txt => {\n               img_src.push( img_txt );\n               return img_txt;\n           });\n       };\n       var img_nat_width = [];\n       let img_width = \"\";\n       for (var i = 0; i < all_imgs.length; i++){\n           await all_imgs[i].getAttribute(\"naturalWidth\").then( img_width => {\n               img_nat_width.push( img_width );\n               return img_width;\n           });\n       };\n\n       for(var i = 0; i < img_src.length; i++){//if naturalWidth attribute is 0 that means image is broken\n          \n           if( img_nat_width[i] == 0 ){\n               console.log(\"WARNING: image is broken: \", img_src[i] );\n           }\n        \n       };\n       expect(img_nat_width).to.be.an('array').that.does.not.include('0');",
+              "err": {
+                "message": "AssertionError: expected [ '149', '0', '0', '160' ] to not include '0'",
+                "estack": "AssertionError: expected [ '149', '0', '0', '160' ] to not include '0'\n    at Context.<anonymous> (test_cases\\Broken Image.js:63:63)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": null
+              },
+              "uuid": "b2afb8e2-796b-4797-9b95-a78afd878738",
+              "parentUUID": "7e20b648-435b-459c-a704-d0a0057cd5f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b2afb8e2-796b-4797-9b95-a78afd878738"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6078,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "6de45759-a685-47d0-b691-08c03b9e459f",
+          "title": "REGR_Challenging DOM",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Challenging DOM\"",
+              "fullTitle": "REGR_Challenging DOM \"before all\" hook in \"REGR_Challenging DOM\"",
+              "timedOut": false,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "10a537a7-3348-478a-adcc-cce038b7dc6d",
+              "parentUUID": "6de45759-a685-47d0-b691-08c03b9e459f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Challenging DOM\"",
+              "fullTitle": "REGR_Challenging DOM \"after all\" hook in \"REGR_Challenging DOM\"",
+              "timedOut": false,
+              "duration": 800,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "71e5cd6f-dcab-4d2f-be81-eed5b263562a",
+              "parentUUID": "6de45759-a685-47d0-b691-08c03b9e459f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-9, verify all buttons work as expected in challenging DOM.",
+              "fullTitle": "REGR_Challenging DOM TC-9, verify all buttons work as expected in challenging DOM.",
+              "timedOut": false,
+              "duration": 8765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/challenging_dom');\n        var title = await driver.findElement(By.css(\"h3\")).getText();\n        await title.should.equal(\"Challenging DOM\");\n        var paragraph = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[1]\")).getText();//\n        await paragraph.should.equal(\"The hardest part in automated web testing is finding the best locators (e.g., ones that well named, unique, and unlikely to change). It's more often than not that the application you're testing was not built with this concept in mind. This example demonstrates that with unique IDs, a table with no helpful locators, and a canvas element.\");\n        //----------------\n        var blue_button = await driver.findElement(By.css(\"a[class='button']\"));\n        var blue_button_id0 = null;\n        await blue_button.getAttribute(\"id\").then( b => {\n            blue_button_id0 = b;\n            return b;\n        });\n        var red_button = await driver.findElement(By.css(\"a[class='button']\"));\n        var red_button_id0 = null;\n        await red_button.getAttribute(\"id\").then( b => {\n            red_button_id0 = b;\n            return b;\n        });\n        var green_button = await driver.findElement(By.css(\"a[class='button']\")); \n        var green_button_id0 = null;\n        await green_button.getAttribute(\"id\").then( b => {\n            green_button_id0 = b;\n            return b;\n        });\n        \n        //refresh page\n        await driver.navigate().refresh();\n        //get new id values\n        blue_button = await driver.findElement(By.css(\"a[class='button']\")); \n        var blue_button_id1 = null;\n        await blue_button.getAttribute(\"id\").then( b => {\n            blue_button_id1 = b;\n            return b;\n        });\n        await blue_button_id0.should.not.equal(blue_button_id1);\n        red_button = await driver.findElement(By.css(\"a[class='button alert']\")); \n        var red_button_id1 = null;\n        await red_button.getAttribute(\"id\").then( b => {\n            red_button_id1 = b;\n            return b;\n        });\n        await red_button_id0.should.not.equal(red_button_id1);\n        \n        green_button = await driver.findElement(By.css(\"a[class='button success']\")); \n        var green_button_id1 = null;\n        await green_button.getAttribute(\"id\").then( b => {\n            green_button_id1 = b;\n            return b;\n        });\n        await green_button_id0.should.not.equal(green_button_id1);",
+              "err": {},
+              "uuid": "45473676-f9c9-42d2-8afc-31f9096eda13",
+              "parentUUID": "6de45759-a685-47d0-b691-08c03b9e459f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-10, verify table is set as expected in challenging DOM.",
+              "fullTitle": "REGR_Challenging DOM TC-10, verify table is set as expected in challenging DOM.",
+              "timedOut": false,
+              "duration": 595,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/challenging_dom');\n        //verify number of links on page\n        var all_links = await driver.findElements( By.css(\"a\") );\n        await all_links.should.have.lengthOf(25);\n        var table = null;\n        table = await driver.findElement(By.css(\"table\")).then( b => {\n            return b;\n        });\n        //table header verification\n        var map = webdriver.promise.map;\n        var elements_header = null;\n        elements_header = await driver.findElements(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/thead[1]/tr[1]\"))\n        var head = null;\n        head = await map(elements_header, e => e.getText() )\n            .then(function(values) {\n                return values[0];\n            });\n    \n        await head.should.equal('Lorem Ipsum Dolor Sit Amet Diceret Action');\n        \n        for(var i = 1; i < 11; i++){ //table has 10 rows\n            elements_header = null;\n            elements_header = await driver.findElements(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[\" + String(i) + \"]\"))\n            var row = null;\n            row = await map(elements_header, e => e.getText() )\n                .then(function(values) {\n                    return values[0];\n                });\n                await row.should.equal('Iuvaret' + String(i-1) + ' Apeirian' + String(i-1) + ' Adipisci' + String(i-1) + ' Definiebas' + String(i-1) + ' Consequuntur' + String(i-1) + ' Phaedrum' + String(i-1) + ' edit delete');\n        };\n        //verify canvas\n        var canvas = await driver.findElement(By.css(\"canvas[id='canvas']\")); \n        await canvas.getAttribute(\"width\").then( w => {\n            canvas_width = w;\n            return w;\n        });\n        await canvas.getAttribute(\"height\").then( h => {\n            canvas_height = h;\n            return h;\n        });\n        await canvas.getAttribute(\"style\").then( s => {\n            canvas_style = s;\n            return s;\n        });\n        await canvas_width.should.equal('599');\n        await canvas_height.should.equal('200');\n        await canvas_style.should.equal(\"border: 1px dotted;\");",
+              "err": {},
+              "uuid": "51545558-f60c-411b-a036-009f0038e4c4",
+              "parentUUID": "6de45759-a685-47d0-b691-08c03b9e459f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45473676-f9c9-42d2-8afc-31f9096eda13",
+            "51545558-f60c-411b-a036-009f0038e4c4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9360,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "4c58fe01-7316-4596-a7ef-659ea1060818",
+          "title": "REGR_Checkboxes",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Checkboxes\"",
+              "fullTitle": "REGR_Checkboxes \"before all\" hook in \"REGR_Checkboxes\"",
+              "timedOut": false,
+              "duration": 4,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "527ee073-f0c9-43d1-b442-f15e8e5dbfad",
+              "parentUUID": "4c58fe01-7316-4596-a7ef-659ea1060818",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Checkboxes\"",
+              "fullTitle": "REGR_Checkboxes \"after all\" hook in \"REGR_Checkboxes\"",
+              "timedOut": false,
+              "duration": 799,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "a5788ed0-d172-4de2-8e1d-7c4307da8e74",
+              "parentUUID": "4c58fe01-7316-4596-a7ef-659ea1060818",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-11, verify current checkbox statuses, selectability and checkbox status after refresh",
+              "fullTitle": "REGR_Checkboxes TC-11, verify current checkbox statuses, selectability and checkbox status after refresh",
+              "timedOut": false,
+              "duration": 8968,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/checkboxes');\n        var title = await driver.findElement(By.css(\"h3\")).getText();\n        await title.should.equal(\"Checkboxes\");\n        var form = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[1]\"));\n        //initial checkbox statuses\n        var form_text = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]\")).getText();\n    \n        await form_text.should.equal(\"checkbox 1\\ncheckbox 2\");\n        var checkbox1 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[1]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox1.should.equal(false);\n        var checkbox2 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[2]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox2.should.equal(true);\n        //verify selectability\n        var checkbox1 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[1]\")).then( function(v) {\n            return v;\n        });\n        await checkbox1.click();\n        var checkbox1_status = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[1]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox1_status.should.equal(true);\n        var checkbox2 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[2]\")).then( function(v) {\n            return v;\n        });\n        await checkbox2.click();\n        var checkbox2_status = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[2]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox2_status.should.equal(false);\n        //post refresh checkbox statuses\n        await driver.navigate().refresh();\n        var form_text = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]\")).getText();\n    \n        await form_text.should.equal(\"checkbox 1\\ncheckbox 2\");\n        var checkbox1 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[1]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox1.should.equal(false);\n        var checkbox2 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/input[2]\")).then( function(v) {\n            return v.isSelected();\n        });\n        await checkbox2.should.equal(true);",
+              "err": {},
+              "uuid": "27806ad0-8c4e-4c6c-860d-a5e2a99ee687",
+              "parentUUID": "4c58fe01-7316-4596-a7ef-659ea1060818",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "27806ad0-8c4e-4c6c-860d-a5e2a99ee687"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+          "title": "REGR_Context Menu",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Context Menu\"",
+              "fullTitle": "REGR_Context Menu \"before all\" hook in \"REGR_Context Menu\"",
+              "timedOut": false,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "2de0d68b-dfbf-4b78-92f2-da64d2bdeac4",
+              "parentUUID": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Context Menu\"",
+              "fullTitle": "REGR_Context Menu \"after all\" hook in \"REGR_Context Menu\"",
+              "timedOut": false,
+              "duration": 951,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "ab39138f-19cf-4fec-8c8c-b2eb02feb924",
+              "parentUUID": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-12, verify title and intro text",
+              "fullTitle": "REGR_Context Menu TC-12, verify title and intro text",
+              "timedOut": false,
+              "duration": 5611,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/context_menu');\n        var title = await driver.findElement(By.css(\"h3\")).getText();\n        await title.should.equal(\"Context Menu\");\n        var paragraph1 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[1]\")).getText(); \n        await paragraph1.should.equal(\"Context menu items are custom additions that appear in the right-click menu.\");\n        var paragraph2 = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[2]\")).getText(); \n        await paragraph2.should.equal(\"Right-click in the box below to see one called 'the-internet'. When you click it, it will trigger a JavaScript alert.\");",
+              "err": {},
+              "uuid": "4094a659-14a2-4607-ac80-27fa1f1da705",
+              "parentUUID": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-13, verify context menu opens on right click and closes on ok click",
+              "fullTitle": "REGR_Context Menu TC-13, verify context menu opens on right click and closes on ok click",
+              "timedOut": false,
+              "duration": 1496,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/context_menu');\n        var click_box = await driver.findElement(By.css(\"div[id='hot-spot']\"));\n        await driver.actions({bridge: false})                       \n            .contextClick( click_box, webdriver.Button.RIGHT).perform();\n        await driver.wait(until.alertIsPresent());\n        let alert = await driver.switchTo().alert();\n        let alert_text = await driver.switchTo().alert().getText();\n        await alert_text.should.equal(\"You selected a context menu\");\n        \n        await alert.accept();\n        await driver.sleep(1000);",
+              "err": {},
+              "uuid": "0df2f7b1-2a05-489e-8a9e-2ed96df075ce",
+              "parentUUID": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-14, verify context menu does not open on multiple left clicks",
+              "fullTitle": "REGR_Context Menu TC-14, verify context menu does not open on multiple left clicks",
+              "timedOut": false,
+              "duration": 3232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/context_menu');\n        var click_box = await driver.findElement(By.css(\"div[id='hot-spot']\"));\n        await click_box.click();\n        await click_box.click();\n        await click_box.click();\n        await click_box.click();\n        \n        await driver.sleep(2000);\n        \n        var alert_text = '';\n        try{\n            await driver.switchTo().alert();\n            alert_text = await driver.switchTo().alert().getText();\n            \n        }\n        catch(e){\n            alert_text = '';\n        }\n        await alert_text.should.not.equal(\"You selected a context menu\");",
+              "err": {},
+              "uuid": "30fba343-6611-437d-ac34-c0e57f595431",
+              "parentUUID": "b0b4ee86-9eae-4aed-98cd-cacb8a64df56",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4094a659-14a2-4607-ac80-27fa1f1da705",
+            "0df2f7b1-2a05-489e-8a9e-2ed96df075ce",
+            "30fba343-6611-437d-ac34-c0e57f595431"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "d4658e90-8aee-42dd-a864-68326ce5bc57",
+          "title": "REGR_Digest Authentication",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-15, verify if a user will be able to login with a valid username and valid password.",
+              "fullTitle": "REGR_Digest Authentication TC-15, verify if a user will be able to login with a valid username and valid password.",
+              "timedOut": false,
+              "duration": 6456,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n        await driver.get('https://admin:admin@the-internet.herokuapp.com/basic_auth');\n        var title = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/h3[1]\")).getText(); \n        await title.should.equal(\"Basic Auth\");\n        var paragraph_congrats = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[1]\")).getText(); \n        await paragraph_congrats.should.equal(\"Congratulations! You must have the proper credentials.\");\n        var footer = await driver.findElement(By.css(\"div[style='text-align: center;']\")).getText(); \n        await footer.should.equal(\"Powered by Elemental Selenium\");\n        var link_elemental_selenium = await driver.findElement(By.css(\"a[href='http://elementalselenium.com/']\")).getText();  \n        await link_elemental_selenium.should.equal(\"Elemental Selenium\");\n        await driver.quit();",
+              "err": {},
+              "uuid": "c0c483ba-1667-4aab-9e69-2da0874c48b6",
+              "parentUUID": "d4658e90-8aee-42dd-a864-68326ce5bc57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-16, verify that user is not able to login with a valid username and invalid password.",
+              "fullTitle": "REGR_Digest Authentication TC-16, verify that user is not able to login with a valid username and invalid password.",
+              "timedOut": false,
+              "duration": 4129,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n        await driver.get('https://admin:admi@the-internet.herokuapp.com/basic_auth');\n        try{\n            await driver.getCurrentUrl();\n        }catch(e){\n            e.message.should.equal(\"Dismissed user prompt dialog: Ova web-stranica zahtijeva da se prijaviš.\");\n        }\n        await driver.quit();",
+              "err": {},
+              "uuid": "e96af89e-2b54-4010-8b14-cc866c81af90",
+              "parentUUID": "d4658e90-8aee-42dd-a864-68326ce5bc57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-17, verify the login page for both, when the field is blank and Submit button is clicked.",
+              "fullTitle": "REGR_Digest Authentication TC-17, verify the login page for both, when the field is blank and Submit button is clicked.",
+              "timedOut": false,
+              "duration": 7508,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n            .forBrowser('firefox')\n            .build();\n        await driver.get('https://the-internet.herokuapp.com/basic_auth');\n        await driver.sleep(1000);\n        await driver.wait(until.alertIsPresent());\n        let alert_1 = await driver.switchTo().alert();\n        await alert_1.accept();\n        await driver.sleep(1000);\n        alert_2 = await driver.switchTo().alert();\n        await alert_2.accept();\n        await driver.sleep(1000);\n        var paragraph = await driver.findElement(By.xpath(\"/html[1]/body[1]\")).getText(); \n        await paragraph.should.equal(\"Not authorized\");\n        await driver.quit();",
+              "err": {},
+              "uuid": "1fd2f4d0-8e13-4c97-a76d-2491446a0d1c",
+              "parentUUID": "d4658e90-8aee-42dd-a864-68326ce5bc57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c0c483ba-1667-4aab-9e69-2da0874c48b6",
+            "e96af89e-2b54-4010-8b14-cc866c81af90",
+            "1fd2f4d0-8e13-4c97-a76d-2491446a0d1c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18093,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "17a5d11c-9840-4d9d-9bc9-403d0f45be21",
+          "title": "REGR_Disappearing Elements",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_Disappearing Elements\"",
+              "fullTitle": "REGR_Disappearing Elements \"before all\" hook in \"REGR_Disappearing Elements\"",
+              "timedOut": false,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "d240ecac-061c-49bb-a061-255f4e22aca8",
+              "parentUUID": "17a5d11c-9840-4d9d-9bc9-403d0f45be21",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_Disappearing Elements\"",
+              "fullTitle": "REGR_Disappearing Elements \"after all\" hook in \"REGR_Disappearing Elements\"",
+              "timedOut": false,
+              "duration": 967,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "e0049ef3-7c5e-41e6-8f8b-ea992341ab2e",
+              "parentUUID": "17a5d11c-9840-4d9d-9bc9-403d0f45be21",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-18, verify title, text and number of buttons that changes with each refresh.",
+              "fullTitle": "REGR_Disappearing Elements TC-18, verify title, text and number of buttons that changes with each refresh.",
+              "timedOut": false,
+              "duration": 8640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/disappearing_elements');\n\n        var title = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/h3[1]\")).getText(); \n\n        await title.should.equal(\"Disappearing Elements\");\n\n        var paragraph_congrats = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/p[1]\")).getText(); \n\n        await paragraph_congrats.should.equal(\"This example demonstrates when elements on a page change by disappearing/reappearing on each page load.\");\n\n        var verify_n_buttons_exists = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n\n        await verify_n_buttons_exists.should.have.lengthOf.within(4,5);\n\n        //verify change in number of buttons after refresh. Should be different\n        await driver.navigate().refresh();\n        await driver.sleep(1000);\n\n        var verify_n_buttons_exists_1 = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n\n        await verify_n_buttons_exists_1.length.should.not.equal(verify_n_buttons_exists.length);//BUG i guess",
+              "err": {
+                "message": "AssertionError: expected 5 to not equal 5",
+                "estack": "AssertionError: expected 5 to not equal 5\n    at Context.<anonymous> (test_cases\\Disappearing Elements.js:52:59)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": ""
+              },
+              "uuid": "16a97e40-b43a-4b99-ac0b-5acb9eabc961",
+              "parentUUID": "17a5d11c-9840-4d9d-9bc9-403d0f45be21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-19, verify all buttons are working properly.",
+              "fullTitle": "REGR_Disappearing Elements TC-19, verify all buttons are working properly.",
+              "timedOut": false,
+              "duration": 17823,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/disappearing_elements');\n    var verify_all_buttons_exist = [];\n    //keep refreshing until the number of button's equals 5\n    while( verify_all_buttons_exist.length != 5 ){\n        await driver.navigate().refresh();\n        await driver.sleep(500);\n        verify_all_buttons_exist = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n    };\n    \n    //verify home button\n    var home_button = await driver.findElement(By.css(\"a[href='/']\")).then( function(v) {\n        return v;\n    });;\n    var home_button_text = await home_button.getText();\n    home_button_text.should.equal(\"Home\");\n    await home_button.click();\n    var current_url = await driver.getCurrentUrl().then(url => {\n        return url;\n    }); \n    current_url.should.equal(\"https://the-internet.herokuapp.com/\");\n    verify_all_buttons_exist = [];\n    while( verify_all_buttons_exist.length != 5 ){\n        await driver.get('https://the-internet.herokuapp.com/disappearing_elements')\n        await driver.sleep(500);\n        verify_all_buttons_exist = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n    };\n    //verify About button\n    var about_button = await driver.findElement(By.css(\"a[href='/about/']\")).then( function(v) {\n        return v;\n    });;\n    var about_button_text = await about_button.getText();\n    about_button_text.should.equal(\"About\");\n    await about_button.click();\n    var current_url = await driver.getCurrentUrl().then(url => {\n        return url;\n    }); \n    current_url.should.equal(\"https://the-internet.herokuapp.com/about/\");\n    var about_title = await driver.findElement(By.css(\"h1\")).getText(); \n\n    verify_all_buttons_exist = [];\n    while( verify_all_buttons_exist.length != 5 ){\n        await driver.get('https://the-internet.herokuapp.com/disappearing_elements')\n        await driver.sleep(500);\n        verify_all_buttons_exist = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n    };//return to disappearing_elements\n    //verify Contact Us button\n    var contact_button = await driver.findElement(By.css(\"a[href='/contact-us/']\")).then( function(v) {\n        return v;\n    });;\n    var contact_button_text = await contact_button.getText();\n    contact_button_text.should.equal(\"Contact Us\");\n    await contact_button.click();\n    var current_url = await driver.getCurrentUrl().then(url => {\n        return url;\n    }); \n    current_url.should.equal(\"https://the-internet.herokuapp.com/contact-us/\");\n    var contact_title = await driver.findElement(By.css(\"h1\")).getText(); \n    verify_all_buttons_exist = [];\n    while( verify_all_buttons_exist.length != 5 ){\n        await driver.get('https://the-internet.herokuapp.com/disappearing_elements')\n        await driver.sleep(500);\n        verify_all_buttons_exist = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n    };//return to disappearing_elements\n    //verify Potfolio button\n    var portfolio_button = await driver.findElement(By.css(\"a[href='/portfolio/']\")).then( function(v) {\n        return v;\n    });;\n    var portfolio_button_text = await portfolio_button.getText();\n    portfolio_button_text.should.equal(\"Portfolio\");\n    await portfolio_button.click();\n    var current_url = await driver.getCurrentUrl().then(url => {\n        return url;\n    }); \n    current_url.should.equal(\"https://the-internet.herokuapp.com/portfolio/\");\n    var portfolio_title = await driver.findElement(By.css(\"h1\")).getText(); \n    verify_all_buttons_exist = [];\n    while( verify_all_buttons_exist.length != 5 ){\n        await driver.get('https://the-internet.herokuapp.com/disappearing_elements')\n        await driver.sleep(500);\n        verify_all_buttons_exist = await driver.findElement(By.css('ul')).findElements(By.css(\"a\"));\n    };//return to disappearing_elements\n    //verify Gallery button\n    var gallery_button = await driver.findElement(By.css(\"a[href='/gallery/']\")).then( function(v) {\n        return v;\n    });;\n    var gallery_button_text = await gallery_button.getText();\n    gallery_button_text.should.equal(\"Gallery\");\n    await gallery_button.click();\n    var current_url = await driver.getCurrentUrl().then(url => {\n        return url;\n    }); \n    current_url.should.equal(\"https://the-internet.herokuapp.com/gallery/\");\n    var gallery_title = await driver.findElement(By.css(\"h1\")).getText(); \n    await gallery_title.should.not.equal(\"Not Found\");//BUG\n\n    await driver.sleep(2000);",
+              "err": {
+                "message": "AssertionError: expected 'Not Found' to not equal 'Not Found'",
+                "estack": "AssertionError: expected 'Not Found' to not equal 'Not Found'\n    at Context.<anonymous> (test_cases\\Disappearing Elements.js:184:40)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": ""
+              },
+              "uuid": "49d1162f-d21b-49c6-973a-dd8b7b3b4e5d",
+              "parentUUID": "17a5d11c-9840-4d9d-9bc9-403d0f45be21",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "16a97e40-b43a-4b99-ac0b-5acb9eabc961",
+            "49d1162f-d21b-49c6-973a-dd8b7b3b4e5d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 26463,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        },
+        {
+          "uuid": "c483a19a-4897-4398-8d66-fe1206298575",
+          "title": "REGR_drag_and_drop",
+          "fullFile": "C:\\Users\\Filip\\Documents\\Portfolio_posao\\the_internet_selenium_js\\tests.js",
+          "file": "\\tests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REGR_drag_and_drop\"",
+              "fullTitle": "REGR_drag_and_drop \"before all\" hook in \"REGR_drag_and_drop\"",
+              "timedOut": false,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = new webdriver.Builder()\n    .forBrowser('firefox')\n    .build();",
+              "err": {},
+              "uuid": "8394929d-1656-4b82-b465-785b54edffca",
+              "parentUUID": "c483a19a-4897-4398-8d66-fe1206298575",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REGR_drag_and_drop\"",
+              "fullTitle": "REGR_drag_and_drop \"after all\" hook in \"REGR_drag_and_drop\"",
+              "timedOut": false,
+              "duration": 1012,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "c43ed5f5-0c24-4c54-a7b8-558a4cbca7aa",
+              "parentUUID": "c483a19a-4897-4398-8d66-fe1206298575",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC-20, verify title, that is possible to drag A to B and that then A and B swap places. NOT AUTOMATED PROPERLY",
+              "fullTitle": "REGR_drag_and_drop TC-20, verify title, that is possible to drag A to B and that then A and B swap places. NOT AUTOMATED PROPERLY",
+              "timedOut": false,
+              "duration": 10421,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://the-internet.herokuapp.com/drag_and_drop');\n        //var title = await driver.findElement(By.xpath(\"/html[1]/body[1]/div[2]/div[1]/div[1]/h3[1]\")).getText(); \n        //await title.should.equal(\"Drag and Drop\");\n        await driver.sleep(2000);\n        //To locate the source and target elements\n        let sourceEle = await driver.findElement(By.id(\"column-a\")).then( function(v) {\n            return v;\n        });\n        let targetEle = await driver.findElement(By.id(\"column-b\")).then( function(v) {\n            return v;\n        });\n        let sourceEle_txt = await  driver.findElement(By.id(\"column-a\")).getText().then( function(v) {\n            return v;\n        });\n        let targetEle_txt = await driver.findElement(By.id(\"column-b\")).getText().then( function(v) {\n            return v;\n        });\n        console.log(\"Elem: \", sourceEle_txt, targetEle_txt);\n        //await driver.sleep(2000);\n        //await driver.actions({bridge: true}).dragAndDrop(sourceEle, targetEle).perform().release().perform();\n     \n        //await driver.sleep(2000);\n        //Workaround, problem with dragAndDrop\n        await driver.executeScript(\n            \"function createEvent(typeOfEvent) {\\n\" + \"var event =document.createEvent(\\\"CustomEvent\\\");\\n\"\n                    + \"event.initCustomEvent(typeOfEvent,true, true, null);\\n\" + \"event.dataTransfer = {\\n\" + \"data: {},\\n\"\n                    + \"setData: function (key, value) {\\n\" + \"this.data[key] = value;\\n\" + \"},\\n\"\n                    + \"getData: function (key) {\\n\" + \"return this.data[key];\\n\" + \"}\\n\" + \"};\\n\" + \"return event;\\n\"\n                    + \"}\\n\" + \"\\n\" + \"function dispatchEvent(element, event,transferData) {\\n\"\n                    + \"if (transferData !== undefined) {\\n\" + \"event.dataTransfer = transferData;\\n\" + \"}\\n\"\n                    + \"if (element.dispatchEvent) {\\n\" + \"element.dispatchEvent(event);\\n\"\n                    + \"} else if (element.fireEvent) {\\n\" + \"element.fireEvent(\\\"on\\\" + event.type, event);\\n\" + \"}\\n\"\n                    + \"}\\n\" + \"\\n\" + \"function simulateHTML5DragAndDrop(element, destination) {\\n\"\n                    + \"var dragStartEvent =createEvent('dragstart');\\n\" + \"dispatchEvent(element, dragStartEvent);\\n\"\n                    + \"var dropEvent = createEvent('drop');\\n\"\n                    + \"dispatchEvent(destination, dropEvent,dragStartEvent.dataTransfer);\\n\"\n                    + \"var dragEndEvent = createEvent('dragend');\\n\"\n                    + \"dispatchEvent(element, dragEndEvent,dropEvent.dataTransfer);\\n\" + \"}\\n\" + \"\\n\"\n                    + \"var source = arguments[0];\\n\" + \"var destination = arguments[1];\\n\"\n                    + \"simulateHTML5DragAndDrop(source,destination);\", sourceEle, targetEle);\n \n        await driver.sleep(2000);\n        let targetText = await sourceEle.getText();\n        if (targetText === \"B\") {\n        console.log(\"PASS: Source is dropped at location\");\n        } else {\n        console.log(\"FAIL: Source is not dropped at location\");\n        }",
+              "err": {},
+              "uuid": "9077bf41-b34d-4a0a-829d-3216d392e3d8",
+              "parentUUID": "c483a19a-4897-4398-8d66-fe1206298575",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9077bf41-b34d-4a0a-829d-3216d392e3d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10421,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 200000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
