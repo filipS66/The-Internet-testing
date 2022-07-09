@@ -1,0 +1,14 @@
+Known issues with brief description:
+TC-8 -> broken image
+TC-18 -> wrong number of buttons problem, not always
+TC-19 -> button problem, not found
+TC-27 -> loading bars, AssertionError: expected [ WebElement{ …(2) }, …(1) ] to have a length of +0 but got 2
+TC-33 -> bug appears occasionally(content is changing), Bad Request
+TC-36 -> page content occasionally changes.
+TC-37 -> Internal Server Error
+TC-38 -> Internal Server Error
+TC-51 -> hover issue, Not found
+TC-52 -> occasionally different behavior
+TC-68 -> occasionally action is unsuccessful, by design
+TC-73 -> wrong position of menu element 
+TC-76 -> occasionally typo
