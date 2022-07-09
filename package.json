@@ -9,6 +9,6 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha ./tests.js --timeout 200000 --reporter mochawesome --require mochawesome/register --headless"
+    "test": "mocha ./tests.js --timeout 200000 --reporter mochawesome --require mochawesome/register"
   }
 }
