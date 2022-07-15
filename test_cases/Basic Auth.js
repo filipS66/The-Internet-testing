@@ -9,7 +9,6 @@ var webdriver = require('selenium-webdriver'),
 
 const { debug } = require('console');
 
-//var firefox = require('selenium-webdriver/firefox');
 
 var should = require('chai').should();
 var expect = require('chai').expect;

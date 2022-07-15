@@ -9,12 +9,9 @@ var webdriver = require('selenium-webdriver'),
 
 const { debug } = require('console');
 
-//var firefox = require('selenium-webdriver/firefox');
 
 var should = require('chai').should();
 var expect = require('chai').expect;
-
-
 
 describe("REGR_A/B Testing", async function(){
 
@@ -32,17 +29,8 @@ describe("REGR_A/B Testing", async function(){
   
     it("TC-1, verif text in paragraph", async function(){
 
-        try{
-            await driver.get('http://the-internet.herokuapp.com/');
-        }catch(e){
-            await driver.quit();
-
-            driver = new webdriver.Builder()
-                .forBrowser('firefox')
-                .build();
-            await driver.get('http://the-internet.herokuapp.com/');
-        }
         
+        await driver.get('http://the-internet.herokuapp.com/');
 
         await driver.findElement(By.css("a[href='/abtest']")).click();
     

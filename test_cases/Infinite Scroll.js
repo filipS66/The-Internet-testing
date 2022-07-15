@@ -14,8 +14,6 @@ var expect = require('chai').expect;
 
 
 
-
-
 describe("REGR_Infinite Scroll", async function(){
 
     var driver;

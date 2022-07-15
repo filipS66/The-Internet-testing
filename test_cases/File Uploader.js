@@ -15,9 +15,6 @@ var expect = require('chai').expect;
 var firefox = require('selenium-webdriver/firefox');
 
 
-
-
-
 describe("REGR_File Uploader", async function(){//known issue present, BUG filename
     
     var driver;

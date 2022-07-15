@@ -27,7 +27,7 @@ describe("REGR_drag_and_drop", async function(){
         await driver.quit();
     });
     
-    it("TC-20, verify title, that is possible to drag A to B and that then A and B swap places. NOT AUTOMATED PROPERLY", async function(){
+    it("TC-20, verify title, that is possible to drag A to B and that then A and B swap places. NOT AUTOMATED PROPERLY (workaround used)", async function(){
 
         await driver.get('https://the-internet.herokuapp.com/drag_and_drop');
 
@@ -85,9 +85,9 @@ describe("REGR_drag_and_drop", async function(){
 
         let targetText = await sourceEle.getText();
         if (targetText === "B") {
-        console.log("PASS: Source is dropped at location");
+            console.log("PASS: Source is dropped at location");
         } else {
-        console.log("FAIL: Source is not dropped at location");
+            console.log("FAIL: Source is not dropped at location");
         }
 
     });

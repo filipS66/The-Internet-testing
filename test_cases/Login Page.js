@@ -47,7 +47,7 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your username is invalid!\n×");
 
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
     });
     
@@ -72,7 +72,7 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your password is invalid!\n×");
 
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
     });
     
@@ -96,13 +96,13 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your username is invalid!\n×");
         
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
 
     });
     
 
-    it("TC-42, verify that user is not able to login invalid username and password", async function(){
+    it("TC-42, verify that user is not able to login with invalid username and password", async function(){
         
 
         await driver.get('https://the-internet.herokuapp.com/login');
@@ -125,12 +125,12 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your username is invalid!\n×");
 
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
     });
     
     
-    it("TC-43, verify that user is not able to login invalid password", async function(){
+    it("TC-43, verify that user is not able to login with invalid password", async function(){
         
 
         await driver.get('https://the-internet.herokuapp.com/login');
@@ -153,13 +153,13 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your password is invalid!\n×");
 
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
 
     });
     
 
-    it("TC-44, verify that user is not able to login invalid username", async function(){
+    it("TC-44, verify that user is not able to login with invalid username", async function(){
         
 
         await driver.get('https://the-internet.herokuapp.com/login');
@@ -182,7 +182,7 @@ describe("REGR_Login Page", async function(){//known issue present, BUG filename
 
         await respon_message.should.equal("Your username is invalid!\n×");
 
-        driver.sleep(2000);//prevents TimeoutError: Failed to read marionette port
+        driver.sleep(2000);
 
 
     });

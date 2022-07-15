@@ -14,8 +14,6 @@ var expect = require('chai').expect;
 
 
 
-
-
 describe("REGR_Floating Menu", async function(){
     
     var driver;

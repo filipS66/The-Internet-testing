@@ -13,8 +13,6 @@ var should = require('chai').should();
 var expect = require('chai').expect;
 
 
-
-
 describe("REGR_Frames", async function(){//known issue present, BUG filename
     
     var driver;
